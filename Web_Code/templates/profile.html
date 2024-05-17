@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+
+    <p>Enter following information:</p>
+
+    <form action="/perform_ner" method="post">
+        <label>CreditScore</label><br>
+        <input type="number" name="cs"><br>
+        <label>Age</label><br>
+        <input type="number" name="age"><br>
+        <label>Tenure</label><br>
+        <input type="number" name="tenure"><br>
+        <label>Balance</label><br>
+        <input type="number" name="balance"><br>
+        <label>NumOfProducts</label><br>
+        <input type="number" name="nop"><br>
+        <label>HasCrCard</label><br>
+        <input type="number" name="hcc"><br>
+        <label>InActiveMember?</label><br>
+        <input type="number" name="active"><br>
+        <label>EstimatedSalary</label><br>
+        <input type="number" name="ES"><br>
+        <label>German?</label><br>
+        <input type="number" name="german"><br>
+        <label>Spanish?</label><br>
+        <input type="number" name="spain"><br>
+        <label>Gender: Enter 1 if male else 0</label><br>
+        <input type="number" name="male"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if response is not none %}
+        <p>Prediction result: {{ response }}</p>
+    {% endif %}
+
+
+</body>
+</html>
